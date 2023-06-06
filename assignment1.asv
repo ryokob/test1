@@ -47,7 +47,7 @@ yjtilde = yj-tauGDPj;
 dates = 1994:1/4:2019.1/4;
 figure
 plot(qk, yktilde,'b', qj, yjtilde,'r')
-title('SKorea(blue) and Japan(red) Detrended log(real GDP) 1994Q1-2019Q1')
+title('SKorea and Japan Detrended log(real GDP) 1994Q1-2019Q1')
 datetick('x', 'yyyy-qq')
 
 % compute sd(y), sd(c), rho(y), rho(c), corr(y,c) (from detrended series)
