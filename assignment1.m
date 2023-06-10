@@ -47,8 +47,9 @@ yjtilde = yj-tauGDPj;
 dates = 1994:1/4:2019.1/4;
 figure
 plot(qk, yktilde,'b', qj, yjtilde,'r')
-title('SKorea(blue) and Japan(red) Detrended log(real GDP) 1994Q1-2019Q1')
+title('Detrended log(real GDP) 1994Q1-2019Q1')
 datetick('x', 'yyyy-qq')
+legend('SKorea', 'Japan')
 
 % compute sd(y), sd(c), rho(y), rho(c), corr(y,c) (from detrended series)
 yksd = std(yktilde)*100;
@@ -61,9 +62,8 @@ yjrho = corrcoef(yjtilde(2:T),yjtilde(1:T-1)); yjrho = yjrho(1,2);
 corrkj = corrcoef(yktilde(1:T),yjtilde(1:T)); corrkj = corrkj(1,2);
 
 disp(['SKorea Percent standard deviation of detrended log real GDP: ', num2str(yksd),'.']); disp(' ')
-disp(['SKorea Serial correlation of detrended log real GDP: ', num2str(ykrho),'.']); disp(' ')
 
 disp(['Japan Percent standard deviation of detrended log real GDP: ', num2str(yjsd),'.']); disp(' ')
-disp(['Japan Serial correlation of detrended log real GDP: ', num2str(yjrho),'.']); disp(' ')
+
 disp(['Contemporaneous correlation between detrended log real GDP of SKorea and Japan: ', num2str(corrkj),'.']);
 
